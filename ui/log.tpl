@@ -165,5 +165,10 @@
         </div>
     </nav>
 </div>
-
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var portalLink = "https://github.com/kevindoni";
+    $('#version').html('Log Mikrotik | Ver: 1.0 | by: <a href="' + portalLink + '">Kevin Doni</a>');
+  });
+</script>
 {include file="sections/footer.tpl"}
