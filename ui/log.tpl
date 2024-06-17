@@ -1,5 +1,9 @@
 {include file="sections/header.tpl"}
-
+    <form class="form-horizontal" method="post" role="form" action="{$_url}plugin/log_ui">
+      <ul class="nav nav-tabs"> {foreach $routers as $r} <li role="presentation" {if $r['id']==$router}class="active" {/if}>
+          <a href="{$_url}plugin/log_ui/{$r['id']}">{$r['name']}</a>
+        </li> {/foreach} </ul>
+    </form>
 <style>
     /* Styles for overall layout and responsiveness */
     body {
