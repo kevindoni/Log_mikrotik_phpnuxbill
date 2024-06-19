@@ -5,7 +5,7 @@ use PEAR2\Net\RouterOS\Client;
 use PEAR2\Net\RouterOS\Request;
 
 // Fungsi untuk menampilkan log monitor
-register_menu(" Log Mikrotik", true, "log_ui", 'AFTER_SETTINGS',  'ion-clipboard ', "New", "green");
+register_menu(" Log Mikrotik", true, "log_ui", 'AFTER_SETTINGS',  'ion ion-ios-photos', "Hot", "red");
 
 function log_ui() {
     global $ui, $routes;
