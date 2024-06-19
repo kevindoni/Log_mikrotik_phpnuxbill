@@ -1,13 +1,17 @@
 {include file="sections/header.tpl"}
-    <form class="form-horizontal" method="post" role="form" action="{$_url}plugin/log_ui">
-      <ul class="nav nav-tabs"> {foreach $routers as $r} <li role="presentation" {if $r['id']==$router}class="active" {/if}>
-          <a href="{$_url}plugin/log_ui/{$r['id']}">{$r['name']}</a>
-        </li> {/foreach} </ul>
-    </form>
+<form class="form-horizontal" method="post" role="form" action="{$_url}plugin/log_ui">
+    <ul class="nav nav-tabs"> 
+        {foreach $routers as $r} 
+            <li role="presentation" {if $r['id']==$router}class="active"{/if}>
+                <a href="{$_url}plugin/log_ui/{$r['id']}">{$r['name']}</a>
+            </li> 
+        {/foreach} 
+    </ul>
+</form>
 <style>
     /* Styles for overall layout and responsiveness */
     body {
-        background-color: #f8f9fa;
+        background-color: #f0f2f5;
         font-family: 'Arial', sans-serif;
     }
     .container {
@@ -16,6 +20,25 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 20px;
+    }
+    .nav-tabs {
+        border-bottom: 2px solid #dee2e6;
+    }
+    .nav-tabs .nav-link {
+        color: #007bff;
+        font-weight: bold;
+    }
+    .nav-tabs .nav-link:hover {
+        background-color: #e9ecef;
+        color: #0056b3;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #495057;
+        background-color: #e9ecef;
+        border-color: #dee2e6 #dee2e6 #fff;
+    }
+    .form-control {
+        border-radius: 4px;
     }
     /* Styles for table and pagination */
     .table {
@@ -39,9 +62,6 @@
     }
     .dataTables_length, .dataTables_filter {
         margin-bottom: 20px;
-    }
-    .form-control {
-        border-radius: 4px;
     }
     .pagination {
         justify-content: center;
